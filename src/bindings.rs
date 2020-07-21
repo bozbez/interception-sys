@@ -102,7 +102,7 @@ pub const InterceptionMouseFlag_INTERCEPTION_MOUSE_MOVE_NOCOALESCE: Interception
 pub const InterceptionMouseFlag_INTERCEPTION_MOUSE_TERMSRV_SRC_SHADOW: InterceptionMouseFlag = 256;
 pub type InterceptionMouseFlag = u32;
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct InterceptionMouseStroke {
     pub state: ::std::os::raw::c_ushort,
     pub flags: ::std::os::raw::c_ushort,
@@ -187,7 +187,7 @@ fn bindgen_test_layout_InterceptionMouseStroke() {
     );
 }
 #[repr(C)]
-#[derive(Debug, Copy, Clone)]
+#[derive(Debug, Default, Copy, Clone)]
 pub struct InterceptionKeyStroke {
     pub code: ::std::os::raw::c_ushort,
     pub state: ::std::os::raw::c_ushort,
